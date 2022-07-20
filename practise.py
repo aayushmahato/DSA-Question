@@ -7,25 +7,19 @@ for k in range(n):
     a.append(x)
 print(a)
 
-# sorting the array
-def sort(a):
-    for i in range(0,n-1):
-        for j in range(0,n-1):
-            if a[j] > a[j+1]:
-                temp = a[j]
-                a[j] = a[j+1]
-                a[j+1] = temp
+#reversing an aaray
+def reverse(a):
+    s = 0
+    e = n-1
+    while s < e:
+        temp = a[s]
+        a[s] = a[e]
+        a[e] = temp
+        s = s + 1
+        e = e - 1
     return a
 
-sort(a)
-
-# to find kth min element of array
-z = int(input("enetr the kth min term = "))
-print(a[z-1])
-
-# to find kth max element of array
-c = int(input("enetr the kth max term = "))
-print(a[len(a)-c])
+print(reverse(a))
 
 
 
