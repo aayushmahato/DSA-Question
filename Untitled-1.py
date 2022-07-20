@@ -7,13 +7,3 @@ for k in range(n):
     a.append(x)
 print(a)
 
-# for rotating array 
-m = int(input("enetr the shifts = "))
-
-for count in range(m):
-    z = a[0]
-    for i in range(1,n):
-        a[i-1] = a[i]
-    a[n-1] = z
-
-print(a)
