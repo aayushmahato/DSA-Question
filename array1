@@ -1,0 +1,27 @@
+# creating array
+n = int(input("enetr the lenght of list = "))
+a = []
+for k in range(n):
+    x = int(input("enter the number = "))
+    a.append(x)
+print(a)
+
+# sorting array
+def sort(a):
+    l = 0
+    r = n-1
+    while l <= r:
+        if a[l] < 0 and a[r] < 0:
+            l = l+1
+        elif a[l] > 0 and a[r] < 0:
+            a[l],a[r] = a[r], a[l]
+            l = l+1
+            r = r-1
+        elif a[l]>0 and a[r]>0:
+            r -= 1
+        else:
+            l =l+1
+            r =r+1
+    return a
+
+print(sort(a)) 
