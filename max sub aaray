@@ -1,0 +1,34 @@
+# creating array
+n = int(input("enter the number ="))
+a = []
+for k in range(n):
+    x = int(input("enetr the number ="))
+    a.append(x)
+print(a)
+
+# max sub aaray
+
+def maxaaray(a):
+    curr_sum = 0
+    far_sum = 0
+    st =0
+    ed = 0
+    poi = 0
+
+    for i in range(n):
+        curr_sum += a[i]
+
+        if curr_sum > far_sum:
+            far_sum = curr_sum
+            st = poi
+            ed = i
+        elif curr_sum < 0:
+            curr_sum = 0
+            poi = i+1
+
+    print("maximum sub areay is ", far_sum)
+    print("start index ", st)
+    print("end index ",ed)
+
+
+maxaaray(a)
