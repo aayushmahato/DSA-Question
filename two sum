@@ -1,0 +1,33 @@
+# creating array
+from ctypes.wintypes import tagRECT
+
+
+n = int(input("enter the number ="))
+a = []
+for k in range(n):
+    x = int(input("enetr the number ="))
+    a.append(x)
+print(a)
+
+target = int(input("enter the target = "))
+
+# brute force
+def twosum(a):
+    for i in range(n):
+        for j in range(i+1,n):
+            sum = a[i]+a[j]
+            if sum == target:
+                return[i,j]  
+print(twosum(a))
+
+# less complexcity
+def twosum(a):
+
+    dic = {}
+
+    for i in range(n):
+        if a[i] in dic:
+            return dic[a[i]] , i
+        else:
+            dic[target -a[i]] = i
+print(twosum(a))
