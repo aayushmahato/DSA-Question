@@ -1,0 +1,50 @@
+# creating array
+n = int(input("enter the number ="))
+a = []
+for k in range(n):
+    x = int(input("enetr the number ="))
+    a.append(x)
+print(a)
+
+# by making new aaray
+def remove(a):
+    if n==0 and n==1:
+        return a
+    
+    temp = [0]*n
+    pivot = 0
+
+    for i in range(0,n-1):
+        if a[i] != a[i+1]:
+            temp[pivot] = a[i]
+            pivot  += 1
+    temp[pivot] = a[n-1]
+    return temp[0:pivot+1]
+
+print(remove(a))
+
+# by removing in same aaray
+
+n = int(input("enter the number ="))
+a = []
+for k in range(n):
+    x = int(input("enetr the number ="))
+    a.append(x)
+print(a)
+
+# by making new aaray
+def remove(a):
+    if n==0 and n==1:
+        return a
+    
+    temp = [0]*n
+    pivot = 0
+
+    for i in range(0,n-1):
+        if a[i] != a[i+1]:
+            a[pivot] = a[i]
+            pivot  += 1
+    a[pivot] = a[n-1]
+    return a[0:pivot+1]
+
+print(remove(a))
