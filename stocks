@@ -1,0 +1,28 @@
+# creating array
+from ctypes.wintypes import MAX_PATH
+
+
+n = int(input("enter the number ="))
+a = []
+for k in range(n):
+    x = int(input("enetr the number ="))
+    a.append(x)
+print(a)
+
+# for profit in stocks
+def stock(a):
+    l = 0
+    r = 1
+    maxp = 0
+
+    while r < len(a):
+        if a[l] < a[r]:
+            profit = a[r] - a[l]
+            maxp = max(maxp,profit)
+        else:
+            l += 1
+        r += 1
+    return maxp
+
+print(stock(a))
+                
